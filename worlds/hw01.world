@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- The Goal -->
+    <include>
+      <uri>model://checkerboard_plane</uri>
+      <name>goal</name>
+      <pose>20 0 0.01 0 0 0</pose>
+    </include>
+
+    <!-- Brick wall segments -->
+    <include>
+      <uri>model://brick_box_3x1x3</uri>
+      <name>wall1</name>
+      <pose>-5 1.5 -1.5 0 0 1.5</pose>
+    </include>
+
+    <include>
+      <uri>model://brick_box_3x1x3</uri>
+      <name>wall2</name>
+      <pose>-5 -1.5 -1.5 0 0 -1.5</pose>
+    </include>
+
+    <include>
+      <uri>model://brick_box_3x1x3</uri>
+      <name>wall3</name>
+      <pose>5 -4 -1.5 0 0 1.5</pose>
+    </include>
+
+    <include>
+      <uri>model://brick_box_3x1x3</uri>
+      <name>wall4</name>
+      <pose>5 4 -1.5 0 0 -1.5</pose>
+    </include>
+
+
+    <!-- Fire hydrants -->
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant1</name>
+      <pose>0 2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant2</name>
+      <pose>-15 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant3</name>
+      <pose>10 -2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant4</name>
+      <pose>-15 5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant5</name>
+      <pose>-15 -4 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant6</name>
+      <pose>-10 1.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant7</name>
+      <pose>-10 -2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://fire_hydrant</uri>
+      <name>hydrant8</name>
+      <pose>10 2 0 0 0 0</pose>
+    </include>
+
+
+    <!-- A testing model that includes the Velodyne sensor model -->
+    <model name="teapot0">
+      <pose>-20 0 0 0 0 0</pose>
+
+      <include>
+        <uri>model://teapot</uri>
+      </include>
+
+      <plugin name="teapot_control" filename="libcar_control_plugin.so"/>
+    </model>
+
+  </world>
+</sdf>
